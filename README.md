@@ -18,6 +18,8 @@
 
 ## <a name="2" href="AbstractFactory/abstractfactory.py">Absract Factory</a>
 
+Tenemos una tienda de muebles, silla sofa y mesilla, y cada producto tiene las variantes ArtDecó, Victoriana y Moderna.
+
 ---
 
 ## <a name="3" href="Builder/builder.py">Builder</a>
