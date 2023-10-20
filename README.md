@@ -6,16 +6,21 @@
 
 ## Indice
 
-- [](#1)
+- [Factory Method](#1)
 - [Abstract Factory](#2)
 - [Builder](#3)
 
-## <a name="2">Absract Factory</a>
+---
 
+## <a name="1">Factory Method</a>
 
 ---
 
-Builder
+## <a name="2">Absract Factory</a>
+
+---
+
+## <a name="3">Builder</a>
 
 Permite construir objetos complejos (una pizza es un objeto complejo)
 
