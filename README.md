@@ -12,7 +12,7 @@
 
 ---
 
-## <a name="1" href="FactoryMethod/factorymethod.py" style="color: white; text-decoration: underlined">Factory Method</a>
+## <a name="1" href="FactoryMethod/factorymethod.py">Factory Method</a>
 
 ---
 
