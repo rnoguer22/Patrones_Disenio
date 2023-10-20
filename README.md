@@ -16,11 +16,11 @@
 
 ---
 
-## <a name="2">Absract Factory</a>
+## <a name="2" href="AbstractFactory/abstractfactory.py>Absract Factory</a>
 
 ---
 
-## <a name="3">Builder</a>
+## <a name="3" href="Builder/builder.py>Builder</a>
 
 Permite construir objetos complejos (una pizza es un objeto complejo)
 
