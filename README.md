@@ -20,6 +20,10 @@
 
 Tenemos una tienda de muebles, silla sofa y mesilla, y cada producto tiene las variantes ArtDecó, Victoriana y Moderna.
 
+<p align="center">
+  <img src="https://github.com/rnoguer22/Patrones_Disenio/blob/main/img/Abstract%20Factory.PNG" width=400px height=auto>
+</p>
+
 ---
 
 ## <a name="3" href="Builder/builder.py">Builder</a>
