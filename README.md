@@ -9,6 +9,7 @@
 - [Factory Method](#1)
 - [Abstract Factory](#2)
 - [Builder](#3)
+- [Prototype](#4)
 
 ---
 
@@ -33,3 +34,13 @@ Permite construir objetos complejos (una pizza es un objeto complejo)
 Imagina que estamos construyendo una casa prefabricada, que sera nuestro modelo base. Y en base a esta casa podemos ampliarla, añadiendo piscina, garaje, jardín, etc.
 
 Construimos la casa inicial y a partir de ahi creamos los modulos
+
+---
+
+## <a name="4" href="Prototype/prototype.py">Prototype</a>
+
+Tenemos clones y queremos hacer una copia
+
+Hacemos clones y cada clon tiene su autonomia, 
+
+No le gusta al ticher. Cierta incongruencia a la hora de clonar, ya que se copia todo sin saber lo que hay dentro
