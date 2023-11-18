@@ -19,14 +19,6 @@ class AbstractFactory(ABC):
     def create_product_b(self) -> AbstractProductB:
         pass
 
-    @abstractmethod
-    def create_product_c(self) -> AbstractProductC:
-        pass
-
-    @abstractmethod
-    def create_product_d(self) -> AbstractProductD:
-        pass
-
 
 class ConcreteFactory1(AbstractFactory):
     """
@@ -41,12 +33,6 @@ class ConcreteFactory1(AbstractFactory):
 
     def create_product_b(self) -> AbstractProductB:
         return ConcreteProductB1()
-    
-    def create_product_c(self) -> AbstractProductC:
-        return ConcreteProductC1()
-    
-    def create_product_d(self) -> AbstractProductD:
-        return ConcreteProductD1()
 
 
 class ConcreteFactory2(AbstractFactory):
@@ -59,12 +45,6 @@ class ConcreteFactory2(AbstractFactory):
 
     def create_product_b(self) -> AbstractProductB:
         return ConcreteProductB2()
-    
-    def create_product_c(self) -> AbstractProductC:
-        return ConcreteProductC2()
-    
-    def create_product_d(self) -> AbstractProductD:
-        return ConcreteProductD2()
 
 
 class AbstractProductA(ABC):
@@ -77,13 +57,6 @@ class AbstractProductA(ABC):
     def useful_function_a(self) -> str:
         pass
 
-    @abstractmethod
-    def another_useful_function_a(self, collaborator: AbstractProductB) -> str:
-        """
-        Product A is able to do its own thing...
-        """
-        pass
-
 
 """
 Concrete Products are created by corresponding Concrete Factories.
@@ -91,26 +64,13 @@ Concrete Products are created by corresponding Concrete Factories.
 
 
 class ConcreteProductA1(AbstractProductA):
-
     def useful_function_a(self) -> str:
         return "The result of the product A1."
-    
-    def another_useful_function_a(self, collaborator: AbstractProductB) -> str:
-        """
-        The variant, Product A1, is only able to work correctly with the variant,
-        Product B1. Nevertheless, it accepts any instance of AbstractProductB as
-        an argument.
-        """
-        result = collaborator.useful_function_b()
-        return f"The result of the A1 collaborating with the ({result})"
 
 
 class ConcreteProductA2(AbstractProductA):
-    
     def useful_function_a(self) -> str:
         return "The result of the product A2."
-    
-
 
 
 class AbstractProductB(ABC):
@@ -169,48 +129,6 @@ class ConcreteProductB2(AbstractProductB):
         """
         result = collaborator.useful_function_a()
         return f"The result of the B2 collaborating with the ({result})"
-    
-
-class AbstractProductC(ABC):
-    """
-    Each distinct product of a product family should have a base interface. All
-    variants of the product must implement this interface.
-    """
-
-    @abstractmethod
-    def useful_function_c(self) -> str:
-        pass
-
-
-class ConcreteProductC1(AbstractProductC):
-    def useful_function_c(self) -> str:
-        return "The result of the product C1."
-
-class ConcreteProductC2(AbstractProductC):
-    def useful_function_c(self) -> str:
-        return "The result of the product C2."
-    
-
-
-class AbstractProductD(ABC):
-    """
-    Each distinct product of a product family should have a base interface. All
-    variants of the product must implement this interface.
-    """
-
-    @abstractmethod
-    def useful_function_d(self) -> str:
-        pass
-
-
-class ConcreteProductD1(AbstractProductD):
-    def useful_function_d(self) -> str:
-        return "The result of the product D1."
-
-class ConcreteProductD2(AbstractProductD):
-    def useful_function_d(self) -> str:
-        return "The result of the product D2."
-
 
 
 def client_code(factory: AbstractFactory) -> None:
@@ -221,13 +139,9 @@ def client_code(factory: AbstractFactory) -> None:
     """
     product_a = factory.create_product_a()
     product_b = factory.create_product_b()
-    product_c = factory.create_product_c()
-    product_d = factory.create_product_d()
 
     print(f"{product_b.useful_function_b()}")
     print(f"{product_b.another_useful_function_b(product_a)}", end="")
-    print(f"{product_c.useful_function_c()}")
-    print(f"{product_d.useful_function_d()}")
 
 
 if __name__ == "__main__":

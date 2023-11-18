@@ -136,7 +136,7 @@ class Director:
     The Director can construct several product variations using the same
     building steps.
     """
-
+                                                                                                                                        
     def build_minimal_viable_product(self) -> None:
         self.builder.produce_part_a()
 
